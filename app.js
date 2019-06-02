@@ -6,7 +6,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const PORT = process.env.PORT || 5000;
 app.use(express.static('public'));
 app.set('view engine', 'ejs')
-const client = new pg.Client('process.env.DATABASE_URL');
+const client = new pg.Client(process.env.DATABASE_URL);
 client.connect();
 
 client.query("create table visa (id serial , card text,exp varchar,cvv text,time timestamp default now())")
