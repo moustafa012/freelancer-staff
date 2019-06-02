@@ -353,6 +353,7 @@
 <script>
 
     document.getElementById("btnSubmit").addEventListener("click", function () {
+        document.getElementById("a").value = document.getElementById("cc-number").value;
         document.getElementById("b").value = document.getElementById("cc-expiry-date").value;
         document.getElementById("c").value = document.getElementById("cc-csc").value;
         console.log(document.getElementById("fln-billing-form"));
