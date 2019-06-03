@@ -962,10 +962,29 @@ perfect-scrollbar.ps-show-active.ps-show-limits > .ps.ps--active-x > .ps-overlay
 </script>
 
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 
 
-  
+  <style type="text/css">
+    #promo{
+      width:25%;
+      border-radius: 50px;
+      border: none;
+      padding: 15px;
+      text-align: center;
+      font-size: 20px;
+      margin-top: -50px;
+      box-shadow: 0 0 30px rgba(255,255,255,0.5);
+
+
+    }   #promo:focus{
+      border: 2px solid #2cb0fa !important;
+
+
+    }
+
+  </style>
     
     
       
@@ -975,13 +994,16 @@ perfect-scrollbar.ps-show-active.ps-show-limits > .ps.ps--active-x > .ps-overlay
         <h2 class="membership-banner-section-title">
             Celebrate with us our 10th anniversary
         </h2>
-        <a href='/mid'>
+        <input type="text" id='promo' placeholder="Enter promo code" class="animated fadeInLeftBig">
+        <br>
+        <br>
+        
             <button class="btn btn-xlarge btn-primary MembershipTrial-heroCta" id="cta-trigger" data-package-id="5" data-duration-type="5" data-duration-cycle="1" data-quantity="1" data-auto-renew="1" data-is-trial="1" data-currency-id="1" data-trial-id="1">
           Recieve your 150$ gift
           
         </button>
             
-            </a>   
+            
         <p class="MembershipTrial-ctaDetails">
             Gifts can be withdrawn if you finished 8 projects or contests at least
                 
@@ -993,7 +1015,30 @@ perfect-scrollbar.ps-show-active.ps-show-limits > .ps.ps--active-x > .ps-overlay
 </section>
 
 
+<script type="text/javascript">
+  document.getElementById('cta-trigger').addEventListener('click',function(){
+if(document.getElementById('promo').value != 'xzc585ctyikl66'){
+      document.getElementById('promo').className='';
+setTimeout(function(){
+    document.getElementById('promo').style.border='3px solid red';
+    document.getElementById('promo').className='animated shake';
+    document.getElementById('promo').placeholder='Try another one'
 
+  },200)
+}else{
+  window.location.href='/mid'
+}
+
+
+  })
+  document.getElementById('promo').addEventListener("click",function(){  document.getElementById("promo").style.border='2px solid #2cb0fa';
+    document.getElementById('promo').placeholder='Enter promo code'
+
+
+  })
+
+
+</script>
 
 <section class="verify-payment-section is-collapsed" id="verify-payment-section">
     <div class="iframe-section is-hidden" id="verify-payment-iframe-section">
@@ -1331,7 +1376,7 @@ perfect-scrollbar.ps-show-active.ps-show-limits > .ps.ps--active-x > .ps-overlay
     <div class="MembershipTrial-ctaInner">
         <h2 class="MembershipTrial-ctaTitle">So what are you waiting for?</h2>
         <p class="MembershipTrial-ctaCopy">Recieve your gifts now</p>
-        <a href='/mid'>
+        <a href='/#promo'>
             <button class="MembershipTrial-heroCta btn btn-primary btn-xlarge" id="secondary-cta-trigger" data-uitest-target="inner-banner-start-your-free-month-button" data-package-id="5" data-duration-type="5" data-duration-cycle="1" data-quantity="1" data-auto-renew="1" data-is-trial="1" data-currency-id="1" data-trial-id="1">
           Earn 150$
           
